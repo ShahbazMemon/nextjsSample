@@ -1,20 +1,19 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Todo, TodoListType } from "../../../typings";
+import { Todo, TodoListType } from "../../../../typings";
 
-const fetchTodos = async () => {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos/");
-  const todos: Todo[] = await res.json();
-  console.log(todos);
-  
-  return todos;
-};
+// const fetchTodos = async () => {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/todos/",{
 
-async function TodosList() {
+//   });
+//   const todos: Todo[] = await res.json();
+//   // const todos = data.splice
+//   return todos;
+// };
+
+function TodosList({myTodo}: any) {
   console.log("test");
   
-  const myTodo = await fetchTodos();
   return (
     <>
       {myTodo?.map((todo: Todo) => {

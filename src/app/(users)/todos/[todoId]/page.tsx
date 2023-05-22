@@ -1,5 +1,5 @@
 import React from "react";
-import { Todo } from "../../../../typings";
+import { Todo } from "../../../../../typings";
 import { notFound } from "next/navigation";
 
 type PageProps = {
@@ -10,8 +10,8 @@ type PageProps = {
 
 const fetchTodo = async (todoId: string) => {
   const res = await fetch(
-    `https://jsonplaceholder.typicode.com/todos/${todoId}`,
-    { next: { revalidate: 60 } } //cache
+    `https://jsonplaceholder.typicode.com/todos/${todoId}`
+    //, { next: { revalidate: 60 } } //cache
   );
   const todo: Todo = await res.json();
   return todo;
@@ -19,7 +19,7 @@ const fetchTodo = async (todoId: string) => {
 
 async function TodoPage({ params: { todoId } }: PageProps) {
   const todo = await fetchTodo(todoId);
-  console.log("todo >> ", todo);
+//   console.log("todo >> ", todo);
 
   if (!todo.id) return notFound();
 

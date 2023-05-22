@@ -1,7 +1,7 @@
 import React from "react";
 
-const NotFount = () => {
+const NotFound = () => {
   return <div>wee couldn't find this todo page</div>;
 };
 
-export default NotFount;
+export default NotFound;
