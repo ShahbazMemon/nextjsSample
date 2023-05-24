@@ -13,9 +13,9 @@ const Header = () => {
         justifyContent:"space-around"
       }}
     >
-      <Link href="/">Home</Link>
-      <Link href="/todos">Todos</Link>
-      <Link href="/search">Search</Link>
+      <Link href="/" prefetch={false}>Home</Link>
+      <Link href="/todos" prefetch={false}>Todos</Link>
+      <Link href="/search" prefetch={false}>Search</Link>
     </div>
   );
 };

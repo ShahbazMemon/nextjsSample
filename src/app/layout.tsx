@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import Header from "./Header";
 import "./globals.css";
+import Sidebar from "@/components/sidebar";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
+        <div style={{ overflowY: "hidden", height: "100%" }}>
+          <Header />
+          <div style={{ display: "flex" }}>
+            <Sidebar sidebar={""} />
+            <div style={{ width: "100%" }}>{children}</div>
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

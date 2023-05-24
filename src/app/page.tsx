@@ -6,7 +6,7 @@ import { Todo } from "../../typings";
 
 // const fetchTodos = async () => {
 
-//   const timeOut = Math.floor(Math.random() * 5 + 1) * 1000;
+//   const timeOut = Math.floor(Math.random() * 5 + 1) * 5000;
 //   await new Promise((resolve)=> setTimeout(resolve, timeOut));
   
 //   const res = await fetch("https://jsonplaceholder.typicode.com/todos/", {});
@@ -21,18 +21,20 @@ export default async function Home() {
 
   return (
     <>
-      {/* <Suspense fallback={<p>Loading the Todos</p>}>
-        <h1>Loading Todos</h1>
+      <Suspense fallback={<p>Loading the Todos</p>}>
+        <h1> Todos</h1>
         <div>
-          <TodosList myTodo={myTodo}/>
+          
+          <TodosList/>
         </div>
       </Suspense>
       <Suspense fallback={<p>Loading the Shopping Trolly...</p>}>
+      <h1>shopping cart</h1>
       <div>
-      <TodosList myTodo={myTodo}/>
+      <TodosList/>
       </div>
-    </Suspense> */}
-    <h1>Shopping Trolly...</h1>
+    </Suspense>
+    {/* <h1>Shopping Trolly...</h1> */}
     </>
   );
 }

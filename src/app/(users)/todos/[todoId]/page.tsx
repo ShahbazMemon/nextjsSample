@@ -1,4 +1,4 @@
-import React from "react";
+import React, { cache } from "react";
 import { Todo } from "../../../../../typings";
 import { notFound } from "next/navigation";
 
@@ -19,7 +19,7 @@ const fetchTodo = async (todoId: string) => {
 
 async function TodoPage({ params: { todoId } }: PageProps) {
   const todo = await fetchTodo(todoId);
-//   console.log("todo >> ", todo);
+  //   console.log("todo >> ", todo);
 
   if (!todo.id) return notFound();
 

@@ -1,6 +1,6 @@
 import React from "react";
 import TodosList from "./TodosList";
-import { Todo } from "../../../../typings";
+// import { Todo } from "../../../../typings";
 
 const Todos = async () => {
 
