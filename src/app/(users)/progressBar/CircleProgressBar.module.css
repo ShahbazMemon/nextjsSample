@@ -1,0 +1,17 @@
+.circleProgress {
+    transform: rotate(-90deg);
+  }
+  
+  .circleProgressBg {
+    fill: none;
+    stroke: #e5e5e5;
+  }
+  
+  .circleProgressBar {
+    fill: none;
+    stroke: #007bff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke-dashoffset 0.3s;
+  }
+  
